@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.bg-game {
+  background-image: url("https://a.storyblok.com//f/231809/1920x1080/73c78f39e6/the-game-marketer-home-breaker-image.png/m/3840x0/filters:quality%2875%29");
+  background-size: cover;
+}
+
+.gamezone ::-webkit-scrollbar {
+  height: 1vw;
+  background: linear-gradient(to left, red, blue, purple);
+}
+
+.gamezone ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
