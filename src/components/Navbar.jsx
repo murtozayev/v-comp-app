@@ -80,7 +80,7 @@ const Navbar = ({ setShow }) => {
 
     return (
         <nav>
-            <audio ref={audioRef} src="../../public/Binary_Code_Interface_Sound_Effects__Sci_Fi_Computer_Beeps_&_Data.mp3" />
+            <audio ref={audioRef} src="../../public/Interface_Sound_Effects__Futuristic_Computer_Sci_Fi_Sound_Effects.mp3" />
             {/* Blue Turn */}
 
 
