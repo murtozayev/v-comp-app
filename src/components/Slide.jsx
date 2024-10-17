@@ -32,7 +32,7 @@ const Slide = () => {
     }, [])
 
     return (
-        <div id="carouselExampleInterval" className="carousel slide w-[80vw] mx-auto  " data-bs-ride="carousel">
+        <div id="carouselExampleInterval" className="carousel slide w-[80vw] phone:w-[100vw] mx-auto  " data-bs-ride="carousel">
             <div className="carousel-inner">
 
                 {loading && <FadeLoader className="mx-auto mt-[10vw]" />}
@@ -44,7 +44,7 @@ const Slide = () => {
                             className={`carousel-item ${index === 0 ? "active" : ""}`} // 1-chi slaydga 'active' qo'shildi
                             data-bs-interval="2000"
                         >
-                            <img src={item.slideUrl} className="d-block w-[80vw] h-[35vw] " alt={`Slide ${index + 1}`} />
+                            <img src={item.slideUrl} className="d-block phone:w-[100vw] phone:h-[46vw] w-[80vw] h-[35vw] " alt={`Slide ${index + 1}`} />
                         </div>
                     ))
                 ) : (

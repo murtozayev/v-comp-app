@@ -14,6 +14,11 @@ export default {
         new: "red",
         icons:"blue",
         changeIcon: "gold"
+      },
+      screens: {
+        "phone": {
+          "max": "500px"
+        }
       }
     },
   },

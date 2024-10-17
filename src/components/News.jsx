@@ -1,12 +1,12 @@
 const News = () => {
     return (
         <div className=" px-[10vw] py-[5vw] ">
-            <h1 className=" text-[2vw] font-bold ">
+            <h1 className=" text-[2vw] font-bold phone:text-[4vw] ">
                 Computer equipment and accessories store v-comp.com.ua
             </h1>
             <br />
 
-            <p className=" text-[1vw] ">
+            <p className=" text-[1vw] phone:text-[3vw] ">
                 Online store v-comp.com.ua is an all-Ukrainian store of computer equipment and components, where you can easily find a suitable computer for you at a minimum cost. <br /> <br />
                 By visiting our online store, you can buy computers and components that we have in stock or place an order for them.
                 And in the shortest possible time we will deliver the goods you like. <br /> <br />

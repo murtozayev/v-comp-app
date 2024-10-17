@@ -69,15 +69,15 @@ const AboutProduct = () => {
     }, [])
 
     return (
-        <div className=" px-[10vw] py-[2vw] ">
+        <div className=" px-[10vw] phone:px-[1vw] py-[2vw] ">
 
             {loading ? <BounceLoader className=" w-[20vw] mx-auto m-[10vw] " /> : (
 
                 <>
 
-                    <h1 className="font-bold text-[2vw] ">{data.title}</h1>
+                    <h1 className="font-bold text-[2vw] phone:text-[6vw] ">{data.title}</h1>
 
-                    <aside className=" mt-[1vw] flex items-center text-[1vw] gap-[0.2vw] ">
+                    <aside className=" mt-[1vw] flex items-center phone:text-[3vw] text-[1vw] gap-[0.2vw] ">
                         <i className=" fas fa-star text-[yellow] " />
                         <i className=" fas fa-star text-[yellow] " />
                         <i className=" fas fa-star text-[yellow] " />
@@ -88,27 +88,25 @@ const AboutProduct = () => {
                     <br />
                     <hr />
 
-                    <section className="flex gap-[5vw]">
-                        <img className="w-[40vw]" src={data.catalogIcon} alt="Image" />
+                    <section className="flex gap-[5vw] phone:flex-col phone:gap-[3vw] phone:items-center">
+                        <img className="w-[40vw] phone:w-[100%] " src={data.catalogIcon} alt="Image" />
 
-                        <aside className="flex w-[40vw] flex-col gap-[1vw] justify-center relative ">
+                        <aside className="flex w-[40vw] phone:w-[100%] flex-col gap-[1vw] justify-center relative ">
                             <br />
-                            <aside className=" flex gap-[1vw] items-center ">
-                                <h1 className="font-bold text-[2vw] ">{data.price}$</h1>
-                                <button onClick={() => navigate("/pay")} className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-buy text-[white] rounded-[0.3vw] ">Buy now</button>
-                                <button onClick={() => dispatch(addToCart(data))} className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold rounded-[0.3vw] border-[green] border-[0.1vw] ">Add to cart</button>
-                            </aside>
+                            <aside className=" flex gap-[1vw] phone:gap-[3vw] phone:flex-col items-center ">
+                                <h1 className="font-bold phone:text-[7vw] text-[2vw] ">{data.price}$</h1>
+                                <button onClick={() => navigate("/pay")} className="px-[2vw] phone:w-[100%] py-[0.5vw] text-[1vw] font-semibold bg-buy text-[white] phone:text-[3vw] phone:py-[1vw] rounded-[0.3vw] ">Buy now</button>
+                                <button onClick={() => dispatch(addToCart(data))} className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold rounded-[0.3vw] border-[green] phone:w-[100%] border-[0.1vw] phone:text-[3vw] phone:py-[1vw] ">Add to cart</button>
+                            </aside>    
 
-                            <p className="font-semibold text-[2vw] ">
+                            <p className="font-semibold text-[2vw] phone:text-[4vw] phone:text-center ">
                                 {data.desc}
                             </p>
 
-                            <aside className="flex  items-center gap-[2vw]">
+                            <aside className="flex  items-center gap-[2vw] phone:hidden">
                                 <img src={data.type} className=" w-[2vw] " alt="" />
                                 <img src={data.pcType} className=" w-[2vw] " alt="" />
                             </aside>
-
-                            <button className="absolute right-0 top-0 fa-regular fa-heart m-[1vw]" />
                         </aside>
 
                     </section>
