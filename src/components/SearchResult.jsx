@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Store = () => {
 
@@ -11,6 +11,8 @@ const Store = () => {
     const [from, setFrom] = useState('')
 
     const [to, setTo] = useState('')
+
+    const navigate = useNavigate()
 
     function onFilter() {
 
@@ -70,7 +72,7 @@ const Store = () => {
 
                         <aside className="flex items-center mt-[1vw] justify-between">
                             <span className="font-bold text-[1vw] phone:text-[2.5vw] ">{item.price}$</span>
-                            <button className=" text-[0.8vw] phone:text-[1.4vw] font-semibold text-white bg-buy py-[0.2vw] rounded-[0.1vw] px-[2vw] ">Buy</button>
+                            <button onClick={() => navigate("/pay")} className=" text-[0.8vw] phone:text-[1.4vw] font-semibold text-white bg-buy py-[0.2vw] rounded-[0.1vw] px-[2vw] ">Buy</button>
                         </aside>
                     </section>
                 ))}

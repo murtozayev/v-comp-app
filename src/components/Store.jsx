@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FadeLoader } from "react-spinners"
 
 const Store = () => {
@@ -13,6 +13,8 @@ const Store = () => {
     const [from, setFrom] = useState('')
 
     const [to, setTo] = useState('')
+
+    const navigate = useNavigate()
 
     function onFilter() {
 
@@ -100,7 +102,7 @@ const Store = () => {
 
                                 <aside className="flex items-center mt-[1vw] justify-between">
                                     <span className="font-bold text-[1vw] phone:text-[3vw] ">{item.price}$</span>
-                                    <button className=" text-[0.8vw] phone:text-[1.3vw] font-semibold text-white bg-buy py-[0.2vw] rounded-[0.1vw] px-[2vw] ">Buy</button>
+                                    <button onClick={() => navigate("/pay")} className=" text-[0.8vw] phone:text-[1.3vw] font-semibold text-white bg-buy py-[0.2vw] rounded-[0.1vw] px-[2vw] ">Buy</button>
                                 </aside>
                             </section>
                         ))}
